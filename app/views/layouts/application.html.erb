@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eboxbrasil</title>
+  <meta charset="UTF-8">
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+  
+
+</head>
+
+<body id="top">
+<div class="wrapper col0">
+  <div id="topline">
+   <ul>
+          <li>
+            <a href="#">Vendas: (88) 96522-4411 / 3421-3181</a>
+          </li>
+          <li>
+              <a href="mailto:erlon@eboxbrasil.com.br" title="Solicite um orçamento">email: erlon@eboxbrasil.com.br</a>
+          </li>
+        
+          
+        </ul>
+    <div id="search">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="text" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="submit" name="go" id="go" value="Search" />
+        </fieldset>
+      </form>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col1">
+ 
+  <%= render :partial => "pages/menu" %>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+
+<%= render :partial => "pages/slide" %>
+  
+
+
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+
+<%= flash_messages %>
+ <%= yield %>
+
+
+</div>
+
+
+<!-- ####################################################################################################### -->
+<div class="wrapper col4">
+
+ 
+<%= render :partial => "pages/footer" %>
+
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="copyright">
+    <p class="fl_left">
+          Copyright &copy; 2012 - All Rights Reserved - <a href="http://wwww.eboxbrasil.com.br">www.eboxbrasil.com.br</a>
+        </p>
+        <p class="fl_right">
+          Template by <a href="http://www.eboxbrasil.com.br" title="Web master" target="blank">Erlon</a>
+        </p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+
+
+</html>

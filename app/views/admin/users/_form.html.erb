@@ -1,0 +1,57 @@
+<!-- Form elements -->    
+<div class="grid_7">
+
+
+<div class="module">
+<h2><span>Cadastro de Usuários</span></h2>
+
+<div class="module-body">
+<%= form_for [:admin, @user] do |f| %>
+      <p><%= error_messages_for @user %></p>
+    
+    <p>
+        <%= f.label :Nome  %>
+        <%= f.text_field :first_name , :class => "input-medium" %>
+     
+    </p>
+    
+    <p>
+       <%= f.label :Sobrenome %>
+       <%= f.text_field :last_name , :class => "input-medium" %>
+     
+    </p>
+    <p>
+        <%= f.label :Email %>
+        <%= f.text_field :email , :class => "input-medium" %>       
+
+    </p>  
+    <p>
+        <%= f.label :Senha %>
+        <%= f.password_field :password , :class=> "input-medium" %>
+    </p>      
+    <p>
+        <%= f.label :Confirma_senha %>
+        <%= f.password_field :password_confirmation , :class => "input-medium" %>
+    </p>
+        
+    <p>       
+       <%= f.submit "Cadastrar", :class => "submit-green"  %>            
+       <%= link_to admin_users_path ,:class => "submit-gray" do %>
+           
+       <%= image_tag "image-admin/cross-small.gif" %> Cancelar   
+                       
+       <% end %>
+    </p>
+<% end %>
+</div> <!-- End .module-body -->
+
+</div>  <!-- End .module -->
+<div style="clear:both;"></div>
+</div> 
+<!-- End .grid_5 para imagens-->
+
+
+
+<!-- End .grid_6 -->
+
+

@@ -1,0 +1,84 @@
+ <div class="container">
+    <div class="content">
+      <div id="topstory">
+        <h2>Serviços Web</h2>
+        <ul>
+          <li><%= image_tag "img_site.jpg", :size => "190x130" %>
+          	<h3>Criação de sites</h3>
+            <p>
+            	Nossos serviços de criação de sites, ajuda sua empresa a se destacar na Internet, com qualidade e profissionalismo, entregamos cada projeto com o que a de melhor em tecnologia atual do mercado e com resultados. </p>
+
+          
+         
+          </li>
+          <li><%= image_tag "atualizacao1.jpg", :size => "190x130" %>
+          	<h3>Atualização de sites</h3>
+            <p>Se sua empresa já tem um website e necessita de uma reformulação este é o serviço certo, vamos analisar e levantar o que pode ser melhorado no seu site como layout, código e usabilidade para atrair mais clientes. </p>
+           
+          
+          </li>
+          <li class="last"><%= image_tag "portfolio.jpg", :size => "190x130" %>
+          	<h3>Portfólio</h3>
+            <p>Portfólio on-line, uma das melhores formas para voçê divulgar seus produtos na rede mundial, e conseguir chegar ao número muito grande de clientes. </p>
+           
+         
+          </li>
+        </ul>
+        <br class="clear" />
+      </div>
+      <div id="latestnews">
+        <h2>Quem somos</h2>
+        <ul>
+          <li>
+          
+       
+              
+             <p>
+ Somos uma agência web especializada no desenvolvimento de sites institucionais, blog e sistemas integrados.<br>
+
+Já estamos no mercado com boa aceitação com alguns projetos entregues, a Eboxbrasil tem o objetivo de fazer com que o seu negócio alcance novos limites e seja reconhecido no mercado. Para isso contamos com uma equipe de profissionais certificados e experientes para atender todas as necessidades de seu negócio, desde o atendimento pesonalizado até o pós-venda. 
+             </p>
+              <p class="readmore"><%= link_to abauts_path do %>
+              	Continue Lendo &raquo;
+<% end %>
+              	</p>
+
+         
+            <br class="clear" />
+          </li>
+
+         
+        </ul>
+      </div>
+<!-- casos de sucesso -->
+        <div id="topstory">
+        <h2>Casos de sucesso</h2>
+        <ul>
+          <li><%= image_tag "img_site.jpg", :size => "190x130" %>
+          	
+          
+         
+          </li>
+          <li><%= image_tag "atualizacao1.jpg", :size => "190x130" %>
+          	
+          
+          </li>
+          <li class="last"><%= image_tag "portfolio.jpg", :size => "190x130" %>
+          
+         
+          </li>
+        </ul>
+        <br class="clear" />
+      </div>
+      <!-- fecha casos de sucesso -->
+    </div>
+    <div class="column">
+<!-- parceiros -->
+
+    <%= render :partial => "pages/parceiros" %>
+
+      <!-- fecha parceiros -->
+    </div>
+
+    <br class="clear" />
+  </div>

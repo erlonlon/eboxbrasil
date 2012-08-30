@@ -1,0 +1,21 @@
+<% if resource.errors.any? %>
+<div id="error_explanation">
+<span class="notification n-error">
+<%= pluralize(resource.errors.count, "error") %> Não foi possível criar o registro no banco:
+</span>
+<ul>
+<% resource.errors.full_messages.each do |msg| %>
+<li>
+<span class="notification n-attention">
+<%= msg %>
+</span>
+
+</li>  	
+<% end %>
+</ul>
+</div>
+<% end %>
+
+
+
+

@@ -1,0 +1,20 @@
+<div class="grid_5">
+
+<div class="module">
+<h2><span>Imagens disponiveis</span></h2>
+
+<div class="module-body">
+
+	  <%= section (".media") do %>
+      <div class="media">
+        <%- @galeries.each do |g| -%>
+          <%= link_to image_tag(g.document.url(:thumb)) , g.document.url, :target => "_blank"  %>
+        <%- end -%>
+      </div>
+    <% end %>
+
+
+</div>
+</div> <!-- module -->
+<div style="clear:both;"></div>
+</div> <!-- End .grid_5 -->

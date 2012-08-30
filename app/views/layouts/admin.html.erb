@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Eboxbrasil</title>
+<meta charset="UTF-8">
+
+<%= stylesheet_link_tag    "css-admin/application", :media => "all" %>
+<%= javascript_include_tag "admin" %>
+<%= csrf_meta_tags %>
+
+ 
+
+
+</head>
+
+<body>
+  <!-- Header -->
+        <div id="header">
+<%= render :partial => "admin/admins/menu_admin" %>
+
+        </div> 
+ <!-- End #header -->
+        
+        <div class="container_12">
+             <%= flash_messages %>
+<%= yield %>
+        </div>
+ <!-- End .container_12 -->
+
+        
+           
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container_12">
+                <div class="grid_12">
+                    <!-- You can change the copyright line for your own -->
+                    <p>&copy; 2012. <a href="http://www.eboxbrasil.com.br" target="blank" title="Visit For More Free Website Templates">eboxbrasil.com.br</a></p>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div> <!-- End #footer -->
+  
+</body>
+
+
+</html>

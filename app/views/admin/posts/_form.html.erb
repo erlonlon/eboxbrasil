@@ -1,0 +1,72 @@
+<!-- Form elements -->    
+<div class="grid_7">
+
+
+<div class="module">
+<h2><span>Cadastro de Posts</span></h2>
+
+<div class="module-body">
+<%= form_for [:admin, @post] do |f| %>
+ <%= error_messages_for @post %>
+
+ <p>
+   <%= f.label :Selecione_usuário %>
+   <%= collection_select(:post, :user_id, User.all, :id, :first_name, :prompt => true ,:class => "input-long") %>
+ </p>    
+  <p>      
+      <%= f.label :Selecione_categoria %>
+  <%= collection_select(:post, :category_ids, Category.all, :id, :nome, :prompt => true) %>
+
+    </p>    
+    <p>
+        <%= f.label :Titulo  %>
+        <%= f.text_field :title , :class => "input-long" %>
+     
+    </p>
+    
+    <p>
+       <%= f.label :SubTitulo %>
+       <%= f.text_area :excerpt , :cols => "70" , :rows => "1" %>
+     
+    </p>
+    <p>
+        <%= f.label :Conteúdo %>
+        <%= f.text_area :body , :cols => "75" , :rows =>'10' %>       
+
+    </p>  
+    <p>
+        <%= f.label :Publicação %>
+        <%= f.date_select :published_at, :use_short_month => true %>
+    </p>      
+    <p>
+<%= f.label :slug, "Url" %>
+<%= f.text_field :slug , :class => "input-medium" %>
+    </p>
+        
+    <p>       
+         <%= f.check_box :draft %>
+      <%= f.label :Rascunho %>
+    </p>             
+    
+    <p>       
+                    <%= f.submit "Cadastrar", :class => "submit-green"  %> 
+                 
+                  <%= link_to admin_posts_path ,:class => "submit-gray" do %>
+                         
+                     <%= image_tag "image-admin/cross-small.gif" %> Cancelar   
+                                     
+                  <% end %>
+    </p>
+<% end %>
+</div> <!-- End .module-body -->
+
+</div>  <!-- End .module -->
+<div style="clear:both;"></div>
+</div> 
+<!-- End .grid_5 para imagens-->
+
+<%= render :partial => 'admin/galeries/imagem' %>
+
+<!-- End .grid_6 -->
+
+

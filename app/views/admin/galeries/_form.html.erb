@@ -1,0 +1,62 @@
+
+<!-- Form elements -->    
+<div class="grid_7">
+<div class="module">
+<h2><span>Cadastro de Imagens</span></h2>
+
+<div class="module-body">
+<%= form_for [:admin, @galery] do |f| %>
+ <%= error_messages_for @galery %>   
+ <p>
+  <%= f.label :Selecione_categoria %>
+
+ <%= collection_select(:galery, :category_galery_ids, CategoryGalery.all, :id ,:name, :prompt => true, :class => 'imput-medium') %>
+ </p>             
+    <p>
+        <%= f.label :Título %>
+        <%= f.text_field :title , :class => "input-medium" %>
+        
+    </p>
+    <p>
+    <%= f.label :Url %>
+    <%= f.text_field :url, :class => "input-medium" %>  
+    </p>
+    <p>                
+        <%= f.label :Descrição_imagem %>
+        <%= f.text_area :body, :cols => "75" , :rows => "3" %> 
+      </p>
+      <p>
+       <%= f.label :Imagem %>
+       <%= f.file_field :document %>
+      <%= image_tag @galery.document.url(:thumb) %>
+      </p>
+
+    
+    <fieldset>             
+  
+        <%= f.submit "Cadastrar", :class => "submit-green"  %> 
+     
+      <%= link_to admin_galeries_path ,:class => "submit-gray" do %>
+             
+         <%= image_tag "image-admin/cross-small.gif" %> Cancelar   
+                         
+      <% end %>
+       
+      </fieldset>                   
+   
+<% end %>
+</div> <!-- End .module-body -->
+
+</div>  <!-- End .module -->
+<div style="clear:both;"></div>
+</div> 
+
+<!-- End .grid_7 -->
+
+<%= render :partial => 'admin/galeries/imagem' %>
+<!-- List de imagens grid 5 -->
+
+
+
+ 
+

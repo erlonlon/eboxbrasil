@@ -1,0 +1,63 @@
+
+<!-- Header. Status part -->
+<div id="header-status">
+
+<div style="clear:both;"></div>
+</div> <!-- End #header-status -->
+
+<!-- Header. Main part -->
+<div id="header-main">
+<div class="container_12">
+<div class="grid_12">
+    <% if user_signed_in? %>
+<div id="logo">
+<ul id="nav">
+    <li id="current">
+        <%= link_to admin_root_path do %>
+        Home
+<% end %>
+    </li>
+
+    <li><%= link_to admin_categories_path do %>
+        Categorias
+       <% end %>
+    </li>
+     <li><%= link_to admin_posts_path do %>
+        Posts
+       <% end %>
+    </li>
+    <li>
+        <%= link_to admin_galeries_path do %>
+        Galeria
+        <% end %>
+    </li>
+    <li>
+<%= link_to admin_category_galeries_path do %>
+         Categoria de Imagem
+<% end %>
+    </li>
+     <li>
+<%= link_to admin_users_path do %>
+         Usuários
+<% end %>
+    </li>
+    <li>
+ <%= link_to destroy_user_session_path, :method => "delete" do %>
+ <%= image_tag "image-admin/cross-small.gif" %>  Logout
+    <% end %>
+    </li>
+</ul>
+</div>
+
+<% end %>
+<!-- End. #Logo -->
+
+</div>
+<!-- End. .grid_12-->
+<div style="clear: both;"></div>
+</div>
+<!-- End. .container_12 -->
+</div>
+ <!-- End #header-main -->
+
+

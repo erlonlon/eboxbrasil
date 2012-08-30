@@ -1,0 +1,50 @@
+<!-- Form elements -->    
+<div class="grid_7">
+
+<div class="module">
+<h2><span>Cadastro de categoria</span></h2>
+
+<div class="module-body">
+<%= form_for [:admin, @category] do |f| %>
+ <%= error_messages_for @category %>                
+    <p>
+        <%= f.label :nome %>
+        <%= f.text_field :nome , :class => "input-medium" %>
+        
+    </p>   
+    <fieldset>              
+  
+        <%= f.submit "Cadastrar", :class => "submit-green"  %>               
+      <%= link_to admin_categories_path ,:class => "submit-gray" do %>
+             
+         <%= image_tag "image-admin/cross-small.gif" %> Cancelar   
+                         
+      <% end %>                   
+      </fieldset>                  
+   
+<% end %>
+</div> <!-- End .module-body -->
+
+</div>  <!-- End .module -->
+<div style="clear:both;"></div>
+</div> 
+
+<!-- End .grid_7 -->
+<!-- List de imagens grid 5 -->
+<div class="grid_5">
+    
+    <div class="module">
+         <h2><span>Imagens disponiveis</span></h2>
+            
+         <div class="module-body">
+              <%= image_tag "ebox_tranparente_branco.png", :size => "80x80" %>   <%= image_tag "ebox_tranparente_branco.png", :size => "80x80" %>   <%= image_tag "ebox_tranparente_branco.png", :size => "80x80" %>
+             
+            
+         </div>
+    </div> <!-- module -->
+    <div style="clear:both;"></div>
+</div> <!-- End .grid_6 -->
+
+
+ 
+
