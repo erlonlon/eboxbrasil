@@ -1,4 +1,4 @@
-class Admin:PasswordsController < Devise::PasswordsController
+class Admin::PasswordsController < Devise::PasswordsController
 
 layout "admin"
 
