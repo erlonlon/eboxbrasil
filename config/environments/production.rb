@@ -46,7 +46,7 @@ Eboxbrasil::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  # config.assets.precompile += %w( search.js )
+   config.assets.precompile += %w( featured_slide.css forms.css layout.css navi.css tables.css css-admin/grid.css css-admin/reset.css css-admin/styles.css css-admin/tablesorter.css css-admin/theme-blue.css jquery-1.4.1.min.js jquery.cycle.min.js jquery.cycle.setup.js jquery.slidepanel.setup.js jquery.textile.image.js )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
