@@ -1,6 +1,6 @@
 <!-- Dashboard icons -->
 <%= render :partial => 'admin/admins/menu_iconi' %>
- <!-- End .grid_7 -->           
+<!-- End .grid_7 -->           
 
 <div style="clear:both;"></div>           
 
@@ -8,23 +8,23 @@
 <!-- Form elements -->    
 <div class="grid_12">
 
-    <div class="module">
-         <h2><span>Form</span></h2>
-            
-         <div class="module-body">
-         	<%= @post.created_at.strftime("%d de %b de %y") %><br>
-         	<%= @post.category_ids %>
-            <%= textilize @post.title %><br>
+<div class="module">
+<h2><span>Form</span></h2>
 
-  <%= textilize @post.body %>
+<div class="module-body">
+	<%= @post.created_at.strftime("%d de %b de %y") %><br>
+	<%= @post.category_ids %>
+<%= textilize @post.title %><br>
+
+<%= textilize @post.body %>
 <a href="javascript:history.back()">Voltar</a>
 
-         </div> <!-- End .module-body -->
+</div> <!-- End .module-body -->
 
-    </div>  <!-- End .module -->
-    <div style="clear:both;"></div>
+</div>  <!-- End .module -->
+<div style="clear:both;"></div>
 </div> <!-- End .grid_12 -->
-    
+
 
 
 

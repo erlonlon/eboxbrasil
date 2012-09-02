@@ -1,6 +1,8 @@
 Eboxbrasil::Application.routes.draw do 
 
 
+  resources :posts 
+
 scope '/admin' do
   devise_for :users, :controllers => {
   	:sessions => "admin/sessions",

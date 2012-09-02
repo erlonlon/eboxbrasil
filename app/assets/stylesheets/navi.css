@@ -9,8 +9,8 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 #topnav{
 	display:block;
 	float:right;
-	margin-top:22px;
-	width:600px;
+	margin-top:12px;
+	width:650px;
 	font-size:14px;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	}
@@ -23,7 +23,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 
 #topnav li{
 	float:right;
-	margin-right:30px;
+	margin-right:20px;
 	}
 
 #topnav li li{
@@ -136,7 +136,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 	border-bottom:1px dotted #666666;
 	}
 
-.column .subnav a:hover{color:#660000; background-color:#FFFFFF;}
+.column .subnav a:hover{color:#FFFFFF; background-color:#0080FF;}
 
 .column .subnav ul ul a, .column .subnav ul ul ul a, .column .subnav ul ul ul ul a, .column .subnav ul ul ul ul ul a{background:url("../images/black_file.gif") no-repeat #FFFFFF;}
 .column .subnav ul ul a{padding-left:40px; background-position:30px center;}

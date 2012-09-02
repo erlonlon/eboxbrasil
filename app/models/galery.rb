@@ -8,4 +8,7 @@ class Galery < ActiveRecord::Base
    validates_attachment_size :document, :less_than => 1.megabyte
    validates_attachment_content_type :document, :content_type => %w(image/png image/jpeg image/gif)
 
+default_scope order("created_at DESC")
+
+
 end

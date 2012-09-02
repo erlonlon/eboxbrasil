@@ -1,5 +1,5 @@
 class CategoryGalery < ActiveRecord::Base
-  attr_accessible :name, :galery_id
+  attr_accessible :name, :galery_ids
 
   validates_presence_of :name
   has_and_belongs_to_many :galeries
