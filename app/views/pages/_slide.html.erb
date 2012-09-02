@@ -1,18 +1,16 @@
 <div id="featured_slide">
-
 <% if @galeries.present? %>
 <% @galeries.each do |g| %>
+
 <div class="featured_box">
 <div class="floater">
-  <h2><%= g.title %></h2>
-  <p><%= textilize g.body %></p>
+  <h2><%= g.title.titleize %></h2>
+  <p><%=  g.body.titleize %> </p>
+</div>
+    <%= image_tag(g.document.url, :size => "930x375") %>
 </div>
 
-    <%= link_to image_tag(g.document.url(:thumb), :size => "930x375") %>
-
-
-
-</div>
  <% end %>
  <% end %>
+ 
 </div>

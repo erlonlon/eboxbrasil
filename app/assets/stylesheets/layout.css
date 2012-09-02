@@ -390,7 +390,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 #footer .flickrbox, #footer .flickrbox .wrap{display:block; width:260px;}
 #footer .flickrbox .wrap .fix{clear:both;}
-#footer .flickrbox .wrap .flickr_badge_image{display:block; float:left; margin:0 10px 10px 0; width:80px; height:80px;}
+#footer .flickrbox .wrap .flickr_badge_image{display:block; float:left; margin:0 5px 5px 0; width:80px; height:80px;}
 #footer .flickrbox .wrap #flickr_badge_image3, #footer .flickrbox .wrap #flickr_badge_image6{margin-right:0;}
 
 /* ----------------------------------------------Copyright-------------------------------------*/

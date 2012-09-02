@@ -24,10 +24,11 @@ class Admin::GaleriesController < Admin::BaseController
 
     def update
     @galery = Galery.find(params[:id])
-    flash[:notice] = 'Registro atualizado com sucesso.' if @galery.update_attributes(params[:@galery])
+    flash[:notice] = 'Registro atualizado com sucesso.' if @galery.update_attributes(params[:galery])
     respond_with @galery, :location => admin_galeries_path
   
   end
+   
 
    def destroy
     @galery = Galery.find(params[:id])
