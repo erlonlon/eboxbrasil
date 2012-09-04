@@ -9,6 +9,8 @@ private
   	@categories = Category.all
   	@posts = Post.all 
   	@galeries_footer = Galery.limit(6)
+      @category_galeries   = CategoryGalery.find(params[:category_galery_id]) if params[:category_galery_id]
+
 
   	
   end

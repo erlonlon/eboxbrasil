@@ -9,6 +9,6 @@ def load_resources
      @categories = Category.all
        @category_galeries = CategoryGalery.all
         @galeries = Galery.order("created_at DESC")
-        @users =User.all
+        @users = User.all
 end
 end

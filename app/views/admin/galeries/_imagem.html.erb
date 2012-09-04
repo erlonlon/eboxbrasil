@@ -5,13 +5,13 @@
 
 <div class="module-body">
 
-	  <%= section (".media") do %>
-      <div class="media">
-        <%- @galeries.each do |g| -%>
-          <%= link_to image_tag(g.document.url(:thumb)) , g.document.url, :target => "_blank"  %>
-        <%- end -%>
-      </div>
-    <% end %>
+<div id=".media">
+<div class="media">
+<%- @galeries.each do |g| -%>
+  <%= link_to image_tag(g.document.url(:thumb), :size => "60x60") , g.document.url, :target => "_blank"  %>
+<%- end -%>
+</div>
+</div>
 
 
 </div>

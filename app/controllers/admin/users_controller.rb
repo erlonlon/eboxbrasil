@@ -9,6 +9,8 @@ class Admin::UsersController < Admin::BaseController
    respond_with @user
   end
 
+  
+
   def edit
   	@user = User.find(params[:id])
   end
@@ -20,7 +22,7 @@ class Admin::UsersController < Admin::BaseController
 
   def update
   	@user = User.find(params[:id])
-  	flash[:notice] = 'Registro atualizado com sucesso.' if @post.update_attributes(parmas[:id])
+  	flash[:notice] = 'Registro atualizado com sucesso.' if @user.update_attributes(params[:user])
   	respond_with @user , :location => admin_users_path
   end
 
@@ -29,4 +31,6 @@ class Admin::UsersController < Admin::BaseController
   	@user.destroy
   	respond_with @user, :location => admin_user_path
   end
+
+  
 end

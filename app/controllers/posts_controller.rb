@@ -19,7 +19,8 @@ private
     @category   = Category.find(params[:category_id]) if params[:category_id]
     @galeries = Galery.limit(5)
     @category_galeries = CategoryGalery.all
-      @galeries_footer = Galery.limit(6)
+    @category_galeries   = CategoryGalery.find(params[:category_galery_id]) if params[:category_galery_id]
+    @galeries_footer = Galery.limit(6)
 
  
   end
