@@ -1,25 +1,25 @@
- <div class="container">
-    <div class="content">
-     
-      <div id="latestnews">
-        <h2><a>Um pouco mas sobre a Eboxbrasil</a></h2>
-        <ul>
-          <li>
-          
-       
-              
-             <p>
-             	<h4>
+<div class="container">
+<div class="content">
 
- Somos uma agência web especializada no desenvolvimento de sites institucionais, blog e sistemas integrados.</h4>
+<div id="latestnews">
+<h2><a>Um pouco mas sobre a Eboxbrasil</a></h2>
+<ul>
+<li>
+
+
+    
+   <p>
+   	<h4>
+
+Somos uma agência web especializada no desenvolvimento de sites institucionais, blog e sistemas integrados.</h4>
 <span>
 Já estamos no mercado com boa aceitação com alguns projetos entregues, a Eboxbrasil tem o objetivo de fazer com que o seu negócio alcance novos limites e seja reconhecido no mercado. Para isso contamos com uma equipe de profissionais certificados e experientes para atender todas as necessidades de seu negócio, desde o atendimento pesonalizado até o pós-venda. 
-    </span>  
+</span>  
 
-           </p>
-           <h3><a>Uma agência que se preocupa com o cliente</a></h3>
+ </p>
+ <h3><a>Uma agência que se preocupa com o cliente</a></h3>
 
-   
+
 
 <p>
 A Eboxbrasil é uma agência diferente, temos a responsabilidade e comprometimento com o sucesso do seu negócio, não importando se é um negócio de pequeno porte, um site insitucional local ou uma loja virtual de grande porte, sempre buscamos oferecer aos nossos clientes as melhores soluções disponíveis no mercado.
@@ -31,26 +31,36 @@ Venha fazer parte de nossos cases de sucesso, tenha sua empresa na web e aumente
 </p>
 <h3><a>A equipe</a></h3>
 <p>Nossa equipe é formada por profissionais experientes e altamente qualificados, que irão atender todas as necessidades de seu negócio, desde o atendimento personalizado até o pós-venda.</p>
- <p class="readmore"><%= link_to root_path do %>
-              	Inicio &raquo;
+<p class="readmore"><%= link_to root_path do %>
+    	Inicio &raquo;
 <% end %>
-              	</p>
-         
-            <br class="clear" />
-          </li>
+    	</p>
 
-         
-        </ul>
-      </div>
+  <br class="clear" />
+</li>
 
-    </div>
-    <div class="column">
-     
-     <!-- parceiros -->
 
-    <%= render :partial => "pages/parceiros" %>
+</ul>
+</div>
 
-      <!-- fecha parceiros -->
-    </div>
-    <br class="clear" />
-  </div>
+<!-- casos de sucesso -->
+<div id="topstory" >
+
+
+ <%= render :partial => "pages/caso_sucesso" %>
+
+
+</div>
+<!-- fecha casos de sucesso -->
+
+</div>
+<div class="column">
+
+<!-- parceiros -->
+
+<%= render :partial => "pages/parceiros" %>
+
+<!-- fecha parceiros -->
+</div>
+<br class="clear" />
+</div>

@@ -9,6 +9,7 @@ class ServicesController < ApplicationController
     @galeries = Galery.all
     
    @category_galeries   = CategoryGalery.find(3)
-    @galeries_footer = CategoryGalery.find(2)
+    @galeries_footer = CategoryGalery.find(3)
+      @galeries_clientes = CategoryGalery.find(5)
   end
 end

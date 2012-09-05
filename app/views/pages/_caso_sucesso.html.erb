@@ -1,0 +1,16 @@
+<h2>Casos de sucesso</h2>
+ <% @galeries_clientes.galeries.limit(3).each do |c| %>
+<ul>
+<li class="last">
+
+	 <%= link_to image_tag(c.document.url(:medium), :size => "190x130" ), c.document.url, :target => "blank" %>
+
+
+</li>
+
+
+
+</li>
+</ul>
+<% end %>
+<br class="clear" />
