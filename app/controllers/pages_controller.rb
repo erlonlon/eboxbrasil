@@ -5,12 +5,12 @@ class PagesController < ApplicationController
   end
 private
   def load_resources 
-  	@galeries = Galery.limit(5)
-  	@categories = Category.all
-  	@posts = Post.all 
-  	@galeries_footer = Galery.limit(6)
-      @category_galeries   = CategoryGalery.find(params[:category_galery_id]) if params[:category_galery_id]
-
+    @categories = Category.all
+    @category   = Category.find(params[:category_id]) if params[:category_id]
+    @galeries = Galery.all
+    
+     @category_galeries   = CategoryGalery.find(3)
+    @galeries_footer = CategoryGalery.find(2)
 
   	
   end

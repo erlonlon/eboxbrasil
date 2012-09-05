@@ -1,0 +1,46 @@
+
+  <div class="wrapper col3">
+  <div class="container">
+    <div class="content">
+     
+      <div id="latestnews">
+        <h2>Clientes e Parceiros</h2>
+         <% @galeries_clientes.galeries.each do |c| %>
+        <ul>
+          <li>
+            <div class="imgholder">
+            	 <%= link_to image_tag(c.document.url(:medium), :size => "125x125", :class =>"imgl" ), c.document.url, :target => "blank" %>
+
+            </div>
+            <div class="latestnews">
+
+              <h2>   <%= c.title.titleize %></h2>
+              <p>
+              	  <%= c.body %>
+
+              	</p>
+
+              <p>
+              	<%= link_to c.url, :target => "_blank" %>
+
+              	</p>
+            </div>
+            <br class="clear" />
+          </li>
+        
+        </ul>
+          <% end %>    
+      </div>
+    </div>
+    <div class="column">
+     
+   <%= render :partial => "posts/sidebar" %>
+
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+
+
+
+

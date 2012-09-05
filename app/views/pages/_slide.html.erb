@@ -1,6 +1,6 @@
 <div id="featured_slide">
-<% if @galeries.present? %>
-<% @galeries.each do |g| %>
+
+<% @category_galeries.galeries.limit(5).each do |g| %>
 
 <div class="featured_box">
 <div class="floater">
@@ -13,6 +13,6 @@
 </div>
 
  <% end %>
- <% end %>
+ 
  
 </div>

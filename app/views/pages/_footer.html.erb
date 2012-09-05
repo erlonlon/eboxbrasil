@@ -27,7 +27,7 @@
     <div class="box flickrbox">
       <h2>Últimas Imagens !</h2>
       <div class="wrap">
-        <% @galeries_footer.each do |g| %>
+        <% @galeries_footer.galeries.limit(6).each do |g| %>
      
 
         <div class="flickr_badge_image" id="flickr_badge_image1">

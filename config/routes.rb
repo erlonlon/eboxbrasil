@@ -1,6 +1,8 @@
 Eboxbrasil::Application.routes.draw do 
 
 
+  resources :customers
+
   resources :posts 
 
 scope '/admin' do
