@@ -1,15 +1,17 @@
 class PostsController < ApplicationController
 	before_filter :load_resources
   def index
-     @posts = Post.scoped
+  
+     @posts = Post.scoped.paginate page: params[:page], :per_page => 6
+    #@posts = Post.paginate page: params[:page], :per_page => 5
      @posts = @posts.search(params[:search]) if params[:search].present?
      @posts = @category.posts if @category.present?
-     @posts = @posts.published
+     @posts = @posts.published.paginate page: params[:page], :per_page => 6
   	respond_with @posts
   end
 
   def show
-  	@post = Post.find(params[:id])
+  	@post = Post.published.find(params[:id])
   	respond_with @post
   end
   
@@ -22,6 +24,7 @@ private
     @galeries = Galery.all
     
     @category_galeries   = CategoryGalery.find(3)
+    
 
   
 

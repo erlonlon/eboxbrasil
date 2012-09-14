@@ -1,4 +1,4 @@
-<div class="container">
+
 <div class="content">
 
 <div id="comments">
@@ -36,6 +36,11 @@
 </ul>
 <% end %>
 <% end %>
+
+<div class="paginacao">
+	<%= will_paginate @posts %>
+
+</div>
 <a href="javascript:history.back()">Voltar</a>
 </div>
 
@@ -49,7 +54,6 @@
 </div>
 
 <br class="clear" />
-</div>
 
 
 

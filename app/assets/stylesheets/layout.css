@@ -59,8 +59,8 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .col2{color:#FFFFFF; background-color:#0080FF; padding:10px 0;}
 .col2 a{color:#FFFFFF; background-color:#191919;}
 .col3{margin:1px 0; border-top:1px solid #363636; border-bottom:1px solid #363636;}
-.col4{color:#FFFFFF; background-color:#0080FF;}
-.col4 a{color:#FFFF00; background-color:#0080FF;}
+.col4{color:#FFFFFF; background-color:#000000;}
+.col4 a{color:#FFFF00; background-color:#000000;}
 .col5, .col5 a{color:#999999; background-color:#1B1B1B;}
 .col4, .col5{font-family: Verdana, Geneva, sans-serif;}
 .col4 h2, .col5 h2{font-family: Georgia, "Times New Roman", Times, serif;}
@@ -72,6 +72,12 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	margin:0 auto 0;
 	display:block;
 	width:960px;
+	}
+
+	.paginacao{
+
+		text-align: center;
+		display:block;
 	}
 
 /* ----------------------------------------------TopBar-------------------------------------*/
@@ -363,7 +369,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	padding:0 0 8px 0;
 	font-size:18px;
 	color:#CCCCCC;
-	background-color:#0080FF;
+	background-color:#000000;
 	border-bottom:1px dotted #CCCCCC;
 	}
 
@@ -403,3 +409,41 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	margin:0;
 	padding:0;
 	}
+
+
+	/* --------------------  Boxed notifications -------------------- */
+
+.notification {
+	display: block;
+	padding: 20px 20px 20px 45px;
+	border: 1px solid;
+	margin-bottom: 20px;
+	background-repeat: no-repeat;
+	background-position: 20px 20px;
+	}
+
+.n-success {
+	background-color: #a3e6bd;
+	border-color: #68d59b;
+	background-image: url(../image-admin/notification-tick.gif);
+	}
+
+.n-information {
+	background-color: #9fddea;
+	border-color: #5fceea;
+	background-image: url(../image-admin/notification-information.gif);
+	}
+
+.n-attention {
+	background-color: #f9e497;
+	border-color: #ffcb4f;
+	background-image: url(../image-admin/notification-exclamation.gif);
+	}
+
+.n-error {
+	background-color: #ffc6ca;
+	border-color: #efb9c3;
+	background-image: url(../image-admin/notification-slash.gif);
+	}
+
+/* -------------------- Indicators -------------------- */

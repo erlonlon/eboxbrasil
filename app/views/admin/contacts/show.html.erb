@@ -1,0 +1,36 @@
+<div class="container">
+
+
+
+<h2><%= @contact.assunto.titleize %></h2>
+
+
+<div class="author">
+<span class="name"><a href="#">Autor</a>
+</span>
+<span class="wrote"><%= @contact.name %> </span>
+<br>
+
+</div>
+<div class="submitdate">
+<%= @contact.created_at.strftime("%d de %b de %y") %>
+</div>
+
+<p><%= @contact.email %></p>
+<p><%= textilize @contact.body %></p>
+
+
+<a href="javascript:history.back()">Voltar...</a>
+
+
+
+
+<br class="clear" />
+</div>
+
+
+
+
+
+
+

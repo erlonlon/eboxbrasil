@@ -1,115 +1,88 @@
 
-    <!-- Dashboard icons -->
-    <%= render :partial => 'admin/admins/menu_iconi' %>
-    <!-- End .grid_7 -->           
+<!-- Dashboard icons -->
+<%= render :partial => 'admin/admins/menu_iconi' %>
+<!-- End .grid_7 -->           
 
-    <div style="clear:both;"></div>           
+<div style="clear:both;"></div>           
 
-    <div class="grid_12">    
-      <!-- Button -->
-    <div class="bottom-spacing">     
-        <div class="float-right">          
-          <%= link_to new_admin_post_path, :class => "button"  do %>
-            <span>            
-          <%= image_tag "image-admin/plus-small.gif", :size => "12x9"  %> Novo Registro
-            </span>
-          <%  end %>             
-          
-        </div>         
-    </div>    
-     <!-- fecha Button -->  
+<div class="grid_12">    
+<!-- Button -->
+<div class="bottom-spacing">     
+<div class="float-right">          
+<%= link_to new_admin_post_path, :class => "button"  do %>
+<span>            
+<%= image_tag "image-admin/plus-small.gif", :size => "12x9"  %> Novo Registro
+</span>
+<%  end %>             
 
-    <!-- Example table -->
-    <div class="module">
-        <h2><span>Listagem de Posts</span></h2>
-        
-        <div class="module-table-body">           
-            <table id="myTable" class="tablesorter">
-                <% if @posts.present? %>
-                <thead>
-                    <tr>
-                        <th style="width:5%">Código</th>
-                        <th style="width:80%">Titulo</th>
-                         <th style="width:15%">Ações</th>           
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <% @posts.each do |post| %>
-                    <tr>
-                        <td class="align-center"><%= post.id %></td>
-                        <td><%= link_to admin_post_path(post) do %>
-                            <%= post.title.titleize %>
-                            <% end %>
-                        </td>  
-                      
-                      <td> 
-                            <%= link_to edit_admin_post_path(post), :title => "Editar arquivo" do  %>
-                              <span>            
-                              <%= image_tag "image-admin/pencil.gif", :size => "16x16" , alt: 'edite'  %> 
-                             </span>
-                            <% end %>
+</div>         
+</div>    
+<!-- fecha Button -->  
 
-                            <%= link_to  admin_post_path(post), confirm: 'Deletar arquivo, Tem certeza ?', method: :delete , :title => "Excluir arquivo" do %>
-                             <span>            
-                              <%= image_tag "image-admin/bin.gif", :size => "20x16"  %> 
-                             </span>
-                            <%end %>                          
-                           
-                        </td>
-                    </tr>
-                    <% end %>            
+<!-- Example table -->
+<div class="module">
+<h2><span>Listagem de Posts</span></h2>
 
-                </tbody>
-                <% end %>
-            </table>         
-           
-           
-          
-         </div> <!-- End .module-table-body -->
-    </div>
-     <!-- End .module -->
+<div class="module-table-body">           
+<table id="myTable" class="tablesorter">
+<% if @posts.present? %>
+<thead>
+<tr>
+<th style="width:5%">Código</th>
+<th style="width:80%">Titulo</th>
+ <th style="width:15%">Ações</th>           
 
+</tr>
+</thead>
+<tbody>
+<% @posts.each do |post| %>
+<tr>
+<td class="align-center"><%= post.id %></td>
+<td><%= link_to admin_post_path(post) do %>
+    <%= post.title.titleize %>
+    <% end %>
+</td>  
 
+<td> 
+    <%= link_to edit_admin_post_path(post), :title => "Editar arquivo" do  %>
+      <span>            
+      <%= image_tag "image-admin/pencil.gif", :size => "16x16" , alt: 'edite'  %> 
+     </span>
+    <% end %>
 
-         <div class="pagination">           
-            <a href="" class="button"><span><img src="arrow-stop-180-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-stop-180-small.gif" height="9" width="12" alt="First" /> First</span></a> 
-            <a href="" class="button"><span><img src="arrow-180-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-180-small.gif" height="9" width="12" alt="Previous" /> Prev</span></a>
-            <div class="numbers">
-                <span>Page:</span> 
-                <a href="">1</a> 
-                <span>|</span> 
-                <a href="">2</a> 
-                <span>|</span> 
-                <span class="current">3</span> 
-                <span>|</span> 
-                <a href="">4</a> 
-                <span>|</span> 
-                <a href="">5</a> 
-                <span>|</span> 
-                <a href="">6</a> 
-                <span>|</span> 
-                <a href="">7</a> 
-                <span>|</span> 
-                <span>...</span> 
-                <span>|</span> 
-                <a href="">99</a>
-            </div> 
-            <a href="" class="button"><span>Next <img src="arrow-000-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-000-small.gif" height="9" width="12" alt="Next" /></span></a> 
-            <a href="" class="button last"><span>Last <img src="arrow-stop-000-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-stop-000-small.gif" height="9" width="12" alt="Last" /></span></a>
-            <div style="clear: both;"></div> 
-         </div>
-
-    </div>
-    <!-- End .grid_12 -->
-
+    <%= link_to  admin_post_path(post), confirm: 'Deletar arquivo, Tem certeza ?', method: :delete , :title => "Excluir arquivo" do %>
+     <span>            
+      <%= image_tag "image-admin/bin.gif", :size => "20x16"  %> 
+     </span>
+    <%end %>                          
    
-    <div style="clear:both;"></div>
+</td>
+</tr>
+<% end %>            
 
-   
+</tbody>
+<% end %>
+</table>         
 
 
-  
+<div class="pager" id="pager">
+<%= will_paginate @posts %>
+
+</div>
+
+</div> <!-- End .module-table-body -->
+</div>
+<!-- End .module -->           
+
+</div>   
+<!-- End .grid_12 -->
+
+<div style="clear:both;"></div>
+
+
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 class Admin::PostsController < Admin::BaseController
   before_filter :load_resources
   def index
-    @posts = Post.all
+    @posts = Post.paginate page: params[:page], :per_page => 15
     respond_with @posts
   end 
 
@@ -42,7 +42,7 @@ class Admin::PostsController < Admin::BaseController
 
      @categories = Category.all
        @category_galeries = CategoryGalery.all
-        @galeries = Galery.order("created_at DESC")
+        @galeries = Galery.paginate page: params[:page],:per_page => 48
         @users = User.order("first_name ASC")
   end
 end 

@@ -41,6 +41,11 @@
          Usuários
 <% end %>
     </li>
+     <li>
+<%= link_to admin_contacts_path do %>
+         Contatos
+<% end %>
+    </li>
     <li>
  <%= link_to destroy_user_session_path, :method => "delete" do %>
  <%= image_tag "image-admin/cross-small.gif" %>  Logout

@@ -66,7 +66,10 @@
 </tbody>
 <% end %>
 </table>         
+<div class="pager" id="pager">
+<%= will_paginate @galeries %>
 
+</div>
 
 
 </div> <!-- End .module-table-body -->
@@ -75,33 +78,7 @@
 
 
 
-<div class="pagination">           
-<a href="" class="button"><span><img src="arrow-stop-180-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-stop-180-small.gif" height="9" width="12" alt="First" /> First</span></a> 
-<a href="" class="button"><span><img src="arrow-180-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-180-small.gif" height="9" width="12" alt="Previous" /> Prev</span></a>
-<div class="numbers">
-<span>Page:</span> 
-<a href="">1</a> 
-<span>|</span> 
-<a href="">2</a> 
-<span>|</span> 
-<span class="current">3</span> 
-<span>|</span> 
-<a href="">4</a> 
-<span>|</span> 
-<a href="">5</a> 
-<span>|</span> 
-<a href="">6</a> 
-<span>|</span> 
-<a href="">7</a> 
-<span>|</span> 
-<span>...</span> 
-<span>|</span> 
-<a href="">99</a>
-</div> 
-<a href="" class="button"><span>Next <img src="arrow-000-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-000-small.gif" height="9" width="12" alt="Next" /></span></a> 
-<a href="" class="button last"><span>Last <img src="arrow-stop-000-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-stop-000-small.gif" height="9" width="12" alt="Last" /></span></a>
-<div style="clear: both;"></div> 
-</div>
+
 
 </div>
 <!-- End .grid_12 -->

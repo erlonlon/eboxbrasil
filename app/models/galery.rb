@@ -8,7 +8,19 @@ class Galery < ActiveRecord::Base
    validates_attachment_size :document, :less_than => 1.megabyte
    validates_attachment_content_type :document, :content_type => %w(image/png image/jpeg image/gif)
 
-default_scope order("created_at DESC")
+   default_scope order("created_at DESC")
+   before_validation :generate_url
+
+
+ def to_param
+  "#{id}-#{url}"
+end
+
+ protected  
+  def generate_url
+   self.url = title unless url.present?
+   self.url = url.parameterize
+ end
 
 
 end

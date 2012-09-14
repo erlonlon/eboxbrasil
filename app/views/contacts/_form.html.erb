@@ -1,0 +1,52 @@
+
+	<div class="content">      
+
+	<h2>Envie seu Contato</h2>
+	<div id="respond">
+	<%= form_for(@contact) do |f| %>
+
+	<%= error_messages_for @contact %>
+
+	<p>
+	<%= f.text_field :name %>
+	<label for="name"><small>Name (required)</small></label>
+	</p>
+
+	<p>
+	<%= f.text_field :email %>
+	<label for="email"><small>Mail (required)</small></label>
+	</p>
+	<p>
+		<label for="asssunto"><small>Asssunto (required)</small></label>
+	<%= f.text_field :assunto , :size => "82" %>
+
+	</p>
+
+	<p>
+	<%= f.text_area :body , :rows => 10, :cols => 80 %>
+	<label for="comment" style="display:none;"><small>Comment (required)</small></label>
+	</p>
+
+	<p>
+	<%= f.submit "Enviar Contato" %>
+	&nbsp;
+	<%= link_to root_path do %>
+	  Cancelar
+	<% end %>
+	</p>
+
+	<% end %>
+
+
+
+	</div>
+	</div>
+	<div class="column">
+
+
+	<%= render :partial => "posts/sidebar" %>
+	</div>
+	<br class="clear" />
+
+
+

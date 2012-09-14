@@ -1,14 +1,13 @@
 class Admin::GaleriesController < Admin::BaseController
   before_filter :load_resources
   def index
-    @galeries = Galery.all
+    @galeries = Galery.paginate page: params[:page],:per_page => 10
     respond_with @galeries
   end  
   
   def new
     @galery = Galery.new
-
-  respond_with @galery
+    respond_with @galery
   end
  
   def edit
@@ -17,7 +16,7 @@ class Admin::GaleriesController < Admin::BaseController
 
   def create
     @galery = Galery.new(params[:galery])
-    flash[:notice] = 'REgistro criado com sucesso.' if @galery.save
+    flash[:notice] = 'Registro criado com sucesso.' if @galery.save
     respond_with @galery, :location => admin_galeries_path
    
   end
@@ -41,6 +40,6 @@ class Admin::GaleriesController < Admin::BaseController
 
      @categories = Category.all
        @category_galeries = CategoryGalery.all
-        @galeries = Galery.order("created_at DESC")
+        @galeries = Galery.paginate page: params[:page],:per_page => 48
   end
 end
