@@ -11,7 +11,7 @@ class ContactsController < ApplicationController
   def show
 
     @contact = Contact.find(params[:id])
-   respond_with @contact
+    respond_with @contact
     
   end
 
