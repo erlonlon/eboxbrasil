@@ -5,7 +5,7 @@ attr_accessible :body, :excerpt, :title, :category_ids , :published_at, :slug, :
 validates_presence_of :title, :body, :user_id
 belongs_to :user
 has_and_belongs_to_many :categories
-#default_scope order ("created_at DESC")
+default_scope order ("created_at DESC")
 
 before_validation :generate_slug
 
