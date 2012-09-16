@@ -5,6 +5,6 @@ class ContatoMailer < ActionMailer::Base
   def notification(contact)
     @contact = contact
 
-    mail :reply_to =>  @contact.email, :assunto => "Novo Contato do Site"
+    mail :reply_to => @contact.email, :assunto => "Novo Contato do Site"
   end
 end

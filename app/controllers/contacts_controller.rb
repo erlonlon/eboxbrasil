@@ -25,7 +25,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
     flash[:notice] = 'Contato enviado com sucesso. ' if @contact.save 
-    respond_with @contact 
+    respond_with @contact ,:location => contacts_path 
 
   end
 
