@@ -9,24 +9,25 @@
 	<%= error_messages_for @contact %>
 
 	<p>
-	<%= f.text_field :name %>
+	<%= f.text_field :name, :placeholder => "Nome do contato" %>
 	<label for="name"><small>Name (required)</small></label>
 	</p>
 
 	<p>
-	<%= f.text_field :email %>
+	<%= f.text_field :email, :placeholder => "Email para contato" %>
 	<label for="email"><small>Mail (required)</small></label>
 	</p>
 	<p>
 		<label for="asssunto"><small>Asssunto (required)</small></label><br/>
-	<%= f.text_field :assunto , :size => "82" %>
+	<%= f.text_field :assunto ,:placeholder => "Assunto", :size => "82" %>
 
 	</p>
 
 	<p>
-	<%= f.text_area :body , :rows => 10, :cols => 80 %>
+	<%= f.text_area :body ,:placeholder => "Menssagem", :rows => 10, :cols => 80 %>
 	<label for="comment" style="display:none;"><small>Comment (required)</small></label>
 	</p>
+	<p> <%= f.captcha %></p>
 
 	<p>
 	<%= f.submit "Enviar Contato" %>
