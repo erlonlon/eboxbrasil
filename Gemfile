@@ -20,4 +20,6 @@ gem 'devise'
 gem 'reverse_captcha'
 
 gem 'jquery-rails'
+gem 'pdfkit'
+gem "nifty-generators"
 

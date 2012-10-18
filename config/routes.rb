@@ -1,8 +1,9 @@
 Eboxbrasil::Application.routes.draw do 
-
-
+ 
 
 root to: "pages#index" 
+ 
+ resources :curriculo, :only => [:index]
 resources :customers, :only => [:index] #cria só rota para get
 
 resources :posts , :only => [:index, :show]
