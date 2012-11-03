@@ -1,43 +1,41 @@
+<div class="5grid-layout">
+<div class="row">
+<div class="6u">
 
-  
-    <div class="content">
-     
-      <div id="latestnews">
-        <h2>Clientes e Parceiros</h2>
-         <% @galeries_clientes.galeries.each do |c| %>
-        <ul>
-          <li>
-            <div class="imgholder">
-            	 <%= link_to image_tag(c.document.url(:medium), :size => "125x125", :class =>"imgl" ), c.document.url, :target => "blank" %>
+<div class="mobileUI-main-content" id="content">
+<h2>Clientes e Parceiros</h2>
+  <% @galeries_clientes.galeries.each do |c| %>
+  <section>
+  <div class="post">       
 
-            </div>
-            <div class="latestnews">
+  <p class="subtitle">
+  <%= c.title.titleize %>
+  </p>
 
-              <h2>   <%= c.title.titleize %></h2>
-              <p>
-              	  <%= c.body %>
+  <p> <%= link_to image_tag(c.document.url(:medium), :size => "125x125", :class =>"imgl" ), c.document.url, :target => "blank" %></p>
+  <p><strong>  <%= c.body %></strong></p>
 
-              	</p>
+  <p class="button-style2">
+  <%= link_to c.url, :target => "_blank" %>
+  </p>
+  </div>
 
-              <p>
-              	<%= link_to c.url, :target => "_blank" %>
+  </section>
+  <% end %>
+</div>  
 
-              	</p>
-            </div>
-            <br class="clear" />
-          </li>
-        
-        </ul>
-          <% end %>    
-      </div>
-    </div>
-    <div class="column">
-     
-   <%= render :partial => "posts/sidebar" %>
+</div>
+<!--sde bar-->
 
-    </div>
-    <br class="clear" />
-  
+<%= render 'pages/sidebar' %>
+<!--fecha side bar-->
+
+</div>
+</div>
+
+
+
+
 
 
 

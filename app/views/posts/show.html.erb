@@ -1,47 +1,25 @@
-<div class="container">
-
-
-
-<h2><%= @post.title.titleize %></h2>
-
-
-<div class="author">
-<span class="name"><a href="#">Autor</a>
-</span>
-<span class="wrote"><%= @post.user_id %> </span>
-<br>
-
+<div id="page">
+		<div class="5grid-layout">
+			<div class="row">
+				<div class="9u mobileUI-main-content" id="content">
+					<section>
+						<div class="post">
+							<h2><%= @post.title %></h2>
+							<p class="subtitle"><%= @post.created_at.strftime("%d de %b de %y") %></p>
+							<p><%= textilize @post.excerpt %></p>
+							
+							<p>&nbsp;</p>
+							<p><%= textilize @post.body %></p>
+							 <p class="button-style2">
+   <a href="javascript:history.back()">Voltar</a>
+      </p>
+						</div>
+					</section>
+				</div>
+				<div class="3u" id="sidebar2">
+					<%= render 'pages/sidebarshow' %>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="submitdate">
-<%= @post.created_at.strftime("%d de %b de %y") %>
-</div>
-
-<p><%= textilize @post.excerpt %></p>
-<p><%= textilize @post.body %></p>
-
-
-<a href="javascript:history.back()">Voltar...</a>
-
-<h2>Faça um Comentário do Artigo</h2>
-<div id="respond">
-<!--render comentarios -->
-
-
-</div>
-<!--render comentarios -->
-
-<!--fecha div artigos -->
-<div class="column">
-
-
-
-</div>
-<br class="clear" />
-</div>
-
-
-
-
-
-
-

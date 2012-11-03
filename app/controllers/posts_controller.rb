@@ -22,9 +22,10 @@
     @category   = Category.find(params[:category_id]) if params[:category_id]
 
     @galeries = Galery.all
-    @galeries_footer = CategoryGalery.find(2)
+    @galeries_footer = CategoryGalery.find(3)
     @category_galeries   = CategoryGalery.find(3)
     @galeries_clientes = CategoryGalery.find(5)
+    @posts_noticias = Category.find(5)
 
 
 

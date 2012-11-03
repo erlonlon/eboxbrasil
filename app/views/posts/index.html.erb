@@ -1,63 +1,54 @@
+<div class="5grid-layout">
+	<div class="row">
+		<div class="6u">
+		<% if @posts.present? %>
+		<div class="mobileUI-main-content" id="content">
 
-<div class="content">
+			<% @posts.each do |p| %>
+			<section>
+			<div class="post">
 
-<div id="comments">
-<h2>Artigos</h2>
-<% if @posts.present? %>
-<% @posts.each do |p| %>
-<ul class="commentlist">
-<li class="comment_odd">
-<div class="author">
-<span class="name"><a href="#">Autor</a>
-</span>
-<span class="wrote"><%= p.user_id %> </span>
-<br>
-<span class="name">
-<%= link_to post_path(p) do %>
+			<p class="subtitle">
+			<%= link_to post_path(p) do %>
 
-<%= p.title.titleize %>
-<% end %>
-</span>
+			<%= p.title.titleize %>
+			<% end %>
+			</p>
+			<p><%= textilize p.excerpt %></p>
+			<p class="button-style2">
+			<%= link_to post_path(p) do %>
+			Continue Lendo &raquo;
+			<% end %>
+			</p>
+			</div>
+
+			</section>
+
+
+			<% end %>
+		</div>
+		<div class="paginacao">
+		<%= will_paginate @posts %>
+
+		</div>
+		<% end %>   
+		</div>
+
+
+
+		
+
+
+	<!--sde bar-->
+
+	<%= render 'pages/sidebar' %>
+	<!--fecha side bar-->
+
+
+
+
+
+	</div>
 </div>
-<div class="submitdate">
-<%= p.created_at.strftime("%d de %b de %y") %>
-</div>
-
-
-
-<p><%= textilize p.excerpt %></p>
-<p class="readmore"><%= link_to post_path(p) do %>
-	Continue Lendo &raquo;
-<% end %>
-	</p>
-</li>  
-
-
-</ul>
-<% end %>
-<% end %>
-
-<div class="paginacao">
-	<%= will_paginate @posts %>
-
-</div>
-<a href="javascript:history.back()">Voltar</a>
-</div>
-
-
-</div>
-<!--fecha div artigos -->
-<!--div sidebar -->
-<div class="column">
-
-<%= render :partial => "posts/sidebar" %>
-</div>
-
-<br class="clear" />
-
-
-
-
-
 
 

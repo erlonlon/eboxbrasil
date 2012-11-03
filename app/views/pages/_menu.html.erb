@@ -1,58 +1,51 @@
-  <div id="header">
-  <div id="topnav">
-  <ul>
- 
-  <li class="last">
-<%= link_to services_path do %>
-Serviços
-<%end %>
-  
-  
-  </li>
-  
-  <li>
-<%= link_to customers_path do %>
-  Clientes
-  <% end%>
-  </li>
-  <li><a href="#">Contatos</a>
-    <ul>
-<li>
-<%= link_to contacts_path do %>
-  Contatos
-  <% end%>
-</li>
-<li>
-<%= link_to curriculo_index_path do %>
-  Currículo
-  <% end%>
-</li>
-    </ul>
+<header id="header">
+<div class="5grid-layout">
+<div class="row">
+<div class="12u" id="logo"> <!-- Logo -->
 
-  </li>
-  <li>
-  <%= link_to abauts_path do %>
-  Conheça-nos
-  <% end%>
-  </li>
-  <li>
-<%= link_to posts_path do %>
-  Artigos
-  <% end%>
-  </li>
+<h1><%= link_to root_path do %>
+<%= image_tag "ebox_tranparente_branco.png", :size => "250x55", :class => "mobileUI-site-name"  %>
+<% end %>
 
-  <li class="active">
-  <%= link_to root_path do %>
-  Home
-  <% end %>
-  </li>
-  </ul>
-  </div>
-  <div id="logo">
-  <%= link_to root_path do %>
-  <%= image_tag "ebox_tranparente_branco.png", :size => "250x55" %>
-  <% end %>
+</h1>
+<p>Soluções Web</p>
+</div>
+</div>
+</div>
+<div class="5grid-layout">
+<div class="row">
+<div class="12u" id="menu">
+<nav class="mobileUI-site-nav">
+<ul>
+    <li class="current_page_item">
+    <%= link_to root_path do %>
+    Home
+    <% end %>
+    </li>
+    <li><%= link_to posts_path do %>
+    Artigos
+    <% end%></li>
+    <li>
+    <%= link_to contacts_path do %>
+    Contatos
+    <% end%>
 
-  </div>
-  <br class="clear" />
-  </div>
+    </li>
+    <li><%= link_to curriculo_index_path do %>
+    Currículo
+    <% end%></li>
+    <li> <%= link_to abauts_path do %>
+    Conheça-nos
+    <% end%></li>
+    <li><%= link_to customers_path do %>
+    Clientes
+    <% end%></li>
+    <li><%= link_to services_path do %>
+    Serviços
+    <%end %></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</header>

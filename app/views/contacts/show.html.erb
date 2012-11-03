@@ -1,37 +1,31 @@
-<div class="container">
+<div id="page">
+		<div class="5grid-layout">
+			<div class="row">
+				<div class="9u mobileUI-main-content" id="content">
+					<section>
+						<div class="post">
+							<h2><%= @contact.assunto.titleize %></h2>
 
-
-
-<h2><%= @contact.assunto.titleize %></h2>
-
-
-<div class="author">
-<span class="name"><a href="#">Autor</a>
-</span>
-<span class="wrote"><%= @contact.name %> </span>
-<br>
-
-</div>
-<div class="submitdate">
-<%= @contact.created_at.strftime("%d de %b de %y") %>
-</div>
-
-<p><%= @contact.email %></p>
-
-<p><%= textilize @contact.body %></p>
-
-
-<%= link_to contacts_path do %>
+							<p class="subtitle"><%= @contact.name %><%= @contact.created_at.strftime("%d de %b de %y") %></p>
+							<p><%= @contact.email %></p>
+							
+							<p>&nbsp;</p>
+							<p><%= textilize @contact.body %></p>
+							 <p class="button-style2">
+  <%= link_to contacts_path do %>
  Voltar...
 <% end %>
-
-
-
-
-<br class="clear" />
+      </p>
+						</div>
+					</section>
+				</div>
+				<div class="3u" id="sidebar2">
+					<%= render 'pages/sidebarshow' %>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-
 
 
 

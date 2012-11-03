@@ -1,5 +1,10 @@
 /*
  *= require_self
- *= require layout
+ *= require core
+ *= require core-desktop
+ *= require core-1200px
+ *= require core-noscript
+ *= require style
+ *= require style-desktop
  */
 

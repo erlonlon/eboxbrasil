@@ -1,16 +1,21 @@
-<h2>Casos de sucesso</h2>
- <% @galeries_clientes.galeries.limit(3).each do |c| %>
-<ul>
-<li class="last">
+ <div class="5grid-layout">
 
-	 <%= link_to image_tag(c.document.url(:medium), :size => "190x130" ), c.document.url, :target => "blank" %>
-
-
-</li>
-
-
-
-</li>
-</ul>
-<% end %>
-<br class="clear" />
+      <div class="row divider">
+      
+         <% @galeries_clientes.galeries.limit(3).each do |c| %>
+        <div class="4u">
+          <section>
+            <div class="box-style">
+           
+           <%= link_to image_tag(c.document.url(:medium), :size => "190x130" ), c.document.url, :target => "blank" %>
+                      
+              <h3><%= c.title %></h3>
+              <p><%= c.body %></p>
+            </div>
+          </section>
+        </div>
+          <% end %>
+       
+        
+      </div>
+    </div>

@@ -1,18 +1,24 @@
-<div id="featured_slide">
+ <div class="5grid-layout">
+      <div class="row">
+        <div id="banner" class="12u">
+          <div class="container">
 
-<% @category_galeries.galeries.limit(5).each do |g| %>
 
-<div class="featured_box">
-<div class="floater">
-  <h2>
-  
-  	<%= g.title.titleize %></h2>
-  <p><%= g.body.titleize  %> </p>
-</div>
-    <%= image_tag(g.document.url, :size => "930x375") %>
-</div>
 
- <% end %>
- 
- 
-</div>
+          
+
+          	 <div id="slider" class="nivoSlider">
+          	 	<% @category_galeries.galeries.limit(10).each do |g| %>
+          	 	 <%= image_tag(g.document.url, :size => "1150x420") %>
+            
+              <% end %>
+		    </div><!--close slider-->
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>

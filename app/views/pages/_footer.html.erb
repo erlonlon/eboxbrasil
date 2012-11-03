@@ -1,46 +1,56 @@
- <div id="footer">
-    <div class="box1">
-      <h2>Últimas facebook!</h2>
 
-<div class="fb-like-box" data-href="https://www.facebook.com/pages/Eboxbrasil/183072518436336?ref=hl" data-width="350" data-show-faces="true" data-border-color="000000" data-stream="false" data-header="false"></div>
-      <!-- botão google-->
+  <div class="5grid-layout">
+    <div class="row" id="footer-content">
+      <div class="3u" id="box1">
+        <section>
+          <h2>Um Poudo de Reflexão</h2>
+          <div class="balloon">
+            <blockquote>&ldquo;&nbsp;&nbsp;Podemos acreditar que tudo que a vida nos oferecerá no futuro é repetir o que fizemos ontem e hoje. Mas, se prestarmos atenção, vamos nos dar conta de que nenhum dia é igual a outro.&nbsp;&nbsp;&rdquo;<br>
+              <br>
+              <strong>&ndash;&nbsp;&nbsp;Paulo Coelho</strong></blockquote>
+          </div>
+          <div class="ballon-bgbtm">&nbsp;</div>
+          <p></p>
+        </section>
+      </div>
+      <div class="3u" id="box2">
+        <section>
+          <h2>Facebook</h2>
+         <div class="fb-like-box" data-href="https://www.facebook.com/pages/Eboxbrasil/183072518436336?ref=hl" data-width="280" data-show-faces="true" data-border-color="000000" data-stream="false" data-header="false"></div>
+
+          <!-- botão google-->
       <div id="google">
          <g:plusone size="medium" annotation="inline"></g:plusone>
 
       </div>
  <!-- botão google-->
-    </div>
-
-     <!-- fecha redes sociais-->
-    <div class="box contactdetails">
-      <h2>Outros Contatos !</h2>
-      <ul>
+        </section>
+      </div>
+      <div class="3u" id="box3">
+        <section>
+          <h2>Galeria de Imagens</h2>
+           <% @galeries_footer.galeries.limit(9).each do |g| %>
+          
+           <a href="#"> <%= image_tag(g.document.url(:thumb), :size => "80x80") %></a>
+          
+         
+          <% end %>
         
-        <li>Av. Olímpica &amp; 2329</li>
-        <li>Aracati-Ce</li>
-        <li>Postcode/62800-000</li>
-        <li>Tel: 88 3421-3181</li>
-        <li>Fax: 88 9652-4411</li>
-        <li> <a href="mailto:erlon@eboxbrasil.com.br" title="Solicite um orçamento">email: erlon@eboxbrasil.com.br</a></li>
-        <li class="last">LinkedIn: <a href="#">Erlon Carlos</a></li>
-        <li> <iframe src="http://www.paguecomtweet.com.br/bt/ptweet-fb-box.php?id=b7f4b6b979cb6ba926f3662ca21b2b85" name="iframe_botao_ptweet" scrolling="no" frameborder="no" height="66" width="146"></iframe></li>
-      </ul>
-    </div>
-    <div class="box flickrbox">
-      <h2>Últimas Imagens !</h2>
-      <div class="wrap">
-        <% @galeries_footer.galeries.limit(9).each do |g| %>
-     
-
-        <div class="flickr_badge_image" id="flickr_badge_image1">
-          <a href="#">
-            <%= image_tag(g.document.url(:thumb), :size => "80x80") %></a>
-          </div>
-
-
-       <% end %>
-     
+        </section>
+      </div>
+      <div class="3u" id="box4">
+        <section>
+          <h2>Outros Contatos</h2>
+          <p><strong>Avenida Olímpica, 2329</strong></p>
+            <p><strong>Aracati-CE</strong></p>
+              <p><strong>Postcode: 62800-000</strong></p>
+              <p><strong>Fone: 088 3421-3181 / 9652-4411</strong></p>
+                 <p>&nbsp;</p>
+              <p><strong><a href="mailto:erlon@eboxbrasil.com.br" title="Solicite um orçamento">email: erlon@eboxbrasil.com.br</a></strong></p>
+              <p><strong>LinkedIn: <a href="http://www.linkedin.com/pub/erlon-carlos-carlos/1a/831/190" target="_blank">Erlon Carlos</a></strong></p>
+              <p> <iframe src="http://www.paguecomtweet.com.br/bt/ptweet-fb-box.php?id=b7f4b6b979cb6ba926f3662ca21b2b85" name="iframe_botao_ptweet" scrolling="no" frameborder="no" height="66" width="146"></iframe></p>
+       
+        </section>
       </div>
     </div>
-    <br class="clear" />
   </div>
