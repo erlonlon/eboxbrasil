@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eboxbrasil</title>
+  <meta charset="UTF-8">
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= favicon_link_tag 'favicon_atual.ico' %>
+  <!--[if IE 9]><link rel="stylesheet" href="css/style-ie9.css" /><![endif]-->
+
+  <!-- slide show -->
+  <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider({animSpeed:500,
+pauseTime:6000});
+    });
+  </script>
+
+<!-- fecha slide show -->
+
+  <%= csrf_meta_tags %>
+<!--botão facebook-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <!--botão facebook-->
+
+<!--botão google-->
+  <script type="text/javascript">
+  window.___gcfg = {lang: 'pt-BR'};
+
+ (function() {
+  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+  po.src = 'https://apis.google.com/js/plusone.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+  </script>
+
+  <meta name="google-site-verification" content="G9QKMPbnU8tJOwuEWAYeyPPehAM-pkQhdpB9z9wGfiM" />
+
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11357390-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!--botão google-->
+</head>
+
+<body class="homepage">
+<div id="wrapper">
+
+<!-- logo e menu e banner slide -->
+  <div id="header-wrapper">
+
+
+    <!-- logo e menu -->
+       <%= render 'pages/menu' %>
+
+    <!-- fecha logo e menu -->
+
+     <!-- slide show -->
+
+<%= render 'pages/slide' %>
+
+      <!-- fecha slide show -->
+
+  </div>
+
+<!-- fecha logo e menu e banner slide -->
+
+
+   <!-- conteudo central -->
+  <div id="page">
+    <%= flash_messages %>
+         <%= yield %>
+
+  </div>
+
+  <!-- fecha conteudo central -->
+</div>
+
+
+<!--inicio footer-wrapper-->
+<div id="footer-wrapper">
+
+<%= render 'pages/footer' %>
+
+</div>
+
+<!--fecha footer-wrapper-->
+
+
+<div id="copyright">
+  <div class="5grid-layout">
+    <div class="row">
+      <div class="12u">
+       <p>  Copyright &copy; 2012 - All Rights Reserved 
+
+           <a href="http://wwww.eboxbrasil.com.br">www.eboxbrasil.com.br</a> - Design: <a href="http://html5templates.com/" target="_blank">HTML5Templates.com</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+
+
+</html>
