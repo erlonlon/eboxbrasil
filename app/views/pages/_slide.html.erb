@@ -9,7 +9,7 @@
 
           	 <div id="slider" class="nivoSlider">
           	 	<% @category_galeries.galeries.limit(10).each do |g| %>
-          	 	 <%= image_tag(g.document.url, :size => "1150x420") %>
+          	 	 <%= image_tag(g.document.url(:small), :size => "1150x420") %>
             
               <% end %>
 		    </div><!--close slider-->
