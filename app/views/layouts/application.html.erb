@@ -8,15 +8,7 @@
   <%= javascript_include_tag "application" %>
   <%= favicon_link_tag 'favicon_atual.ico' %>
   <!--[if IE 9]><link rel="stylesheet" href="css/style-ie9.css" /><![endif]-->
-<!-- slide show -->
-  <script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider({animSpeed:500,
-pauseTime:6000});
-    });
-  </script>
 
-<!-- fecha slide show -->
   <%= csrf_meta_tags %>
 <!--botão facebook-->
 <div id="fb-root"></div>
@@ -56,6 +48,16 @@ pauseTime:6000});
 
 </script>
 <!--botão google-->
+
+<!-- slide show -->
+  <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider({animSpeed:500,
+pauseTime:6000});
+    });
+  </script>
+
+<!-- fecha slide show -->
 </head>
 
 <body class="homepage">
