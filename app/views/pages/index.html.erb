@@ -10,16 +10,21 @@
               <div class="post">
             <% @posts.each do |p| %>
              
-                <p class="subtitle">  <%= link_to post_path(p) do %>
-
+                <p class="subtitle">
+                  <%= link_to post_path(p) do %>
       <%= p.title.titleize %>
-      <% end %></p>
-      <p><%= textilize p.excerpt %></p>
+      <% end %>
+    </p>
+      <p><%= textilize p.excerpt %>
+       </p>
+       
                 
                <p class="button-style2">
       <%= link_to post_path(p) do %>
       Continue Lendo &raquo;
+     
       <% end %>
+  <br/>  <br/>
       </p>
 
                 <% end %>
@@ -35,9 +40,6 @@
 
         
         </div>
-
-
-
        
       <!-- side bar -->
 

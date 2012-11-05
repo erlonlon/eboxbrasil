@@ -13,6 +13,6 @@ private
     @category_galeries   = CategoryGalery.find(1)
     @galeries_footer = CategoryGalery.find(1)
       @galeries_clientes = CategoryGalery.find(5)
-       @posts_noticias = Category.find(5)
+       @posts_noticias = Category.find(3)
   end
 end
