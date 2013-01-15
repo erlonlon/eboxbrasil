@@ -1,26 +1,26 @@
 <section>
-						<div class="sbox1">
-								<%= form_tag posts_path, :method => :get do %>
-                                 <%= search_field_tag :search, "",
-                                 :placeholder => "Pesquise aqui.",
-                                  :size => 20 %>
-                                 <% end %>
-                                 <br/>
-								<h2>Menu de Opções</h2>
-									<% @categories.each do |category| %>
-							<ul class="style1">
-								<li class="first">
-                                    <%= link_to_unless_current category.nome, posts_path(:category_id => category.id) %></li>
-							
-							</ul>
-							<% end %>
-						</div>
-					</section>
-					<section>
-						<h2>Publicidade</h2>
-						<ul class="style2">
-							<li class="first">
-								<script type="text/javascript"><!--
+<div class="sbox1">
+<%= form_tag posts_path, :method => :get do %>
+<%= search_field_tag :search, "",
+:placeholder => "Pesquise aqui.",
+:size => 20 %>
+<% end %>
+<br/>
+<h2>Menu de Opções</h2>
+<% @categories.each do |category| %>
+<ul class="style1">
+<li class="first">
+<%= link_to_unless_current category.nome, posts_path(:category_id => category.id) %></li>
+
+</ul>
+<% end %>
+</div>
+</section>
+<section>
+<h2>Publicidade</h2>
+<ul class="style2">
+<li >
+<script type="text/javascript"><!--
 google_ad_client = "ca-pub-9829104402949830";
 /* novositeeboxbrasil */
 google_ad_slot = "7528284196";
@@ -31,19 +31,19 @@ google_ad_height = 250;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-							</li>
-							<li>
-							<script type="text/javascript"><!--
-google_ad_client = "ca-pub-9829104402949830";
-/* novositeeboxbrasil */
-google_ad_slot = "7528284196";
-google_ad_width = 250;
-google_ad_height = 250;
-//-->
+</li>
+<li>
+<script type="text/javascript">
+	bb_bid = "1680108";
+	bb_lang = "pt-BR";
+	bb_keywords = "";
+	bb_name = "custom";
+	bb_limit = "4";
+	bb_format = "bbm";
 </script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-							</li>
-						</ul>
-					</section>
+<script type="text/javascript" src="http://static.boo-box.com/javascripts/embed.js"></script>
+	
+
+</li>
+</ul>
+</section>
